@@ -3,6 +3,15 @@
 using namespace std;
 double exponent(double, double);
 double nthroot(double, double);
+double test;
+
+// Check if string can be converted to double.
+bool String2Double(string inputString, double &result) {
+    char* end;
+    result = strtod(inputString.c_str(), &end);
+    if (end == inputString.c_str() || *end != '\0') return false;
+    return true;
+}
 
 // credits to fastapprox for this implementation its extremely fast.
 static inline float
@@ -19,8 +28,15 @@ log2 (float x)
 }
 
 static inline float
-ln (float x)
+ln (string x)
 {
+    if (String2Double(x, test) = true) {
+         double x = std::stod(x);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return 0.69314718f * log2 (x);
 }
 
@@ -30,7 +46,22 @@ double multdec(double x, int i) {
     return r;
 }
 
-double log(int b, double n) {
+// log_b(x) = log_e(x) / log_e(b)
+double log(string b, string n) {
+    if (String2Double(b, test) = true) {
+         double b = std::stod(b);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    if (String2Double(n, test) = true) {
+         double n = std::stod(n);
+         string test("");
+    }
+    else {
+         calculate
+    }
     double val = 0;
     int i, a = 10, r = 0;
     while(n != 1 && a >= 0) {
@@ -42,7 +73,21 @@ double log(int b, double n) {
     return (double)val / multdec(10, r);
 }
 
-double exponent(double a, double b){
+double exponent(string a, string b){
+    if (String2Double(a, test) = true) {
+         double a = std::stod(a);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    if (String2Double(b, test) = true) {
+         double b = std::stod(b);
+         string test("");
+    }
+    else {
+         calculate
+    }
     double t(1);
     for(int i = 0; i < b; ++i)
         t *= a;
@@ -50,7 +95,21 @@ double exponent(double a, double b){
 }
 
 // https://en.wikipedia.org/wiki/Nth_root#Computing_principal_roots
-double nthroot(double num, double np){
+double nthroot(string num, string np){
+    if (String2Double(num, test) = true) {
+         double num = std::stod(num);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    if (String2Double(np, test) = true) {
+         double np = std::stod(np);
+         string test("");
+    }
+    else {
+         calculate
+    }
     double x;
     double A(num);
     double dx;
@@ -65,66 +124,192 @@ double nthroot(double num, double np){
    return x;
 }
 
-long double summation(long double limit,long double index,long double x){
-    long double sum = 0;
-    for(size_t = index;i<=limit;i++){
-        sum+=x;
+double summation(string limit, string index, string x){
+    if (String2Double(limit, test) = true) {
+         double limit = std::stod(limit);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    if (String2Double(index, test) = true) {
+         double index = std::stod(index);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    if (String2Double(x, test) = true) {
+         double x = std::stod(x);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    double sum = 0;
+    for(size_t = index; i <= limit; i++){
+        sum += x;
     }
 }
 
-long double product(long double limit,long double index,long double x){
-    long double product = 1;
-    for(size_t = index;i<=limit;i++){
-        sum*=x;
+double product(string limit, string index, string x){
+    if (String2Double(limit, test) = true) {
+         double limit = std::stod(limit);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    if (String2Double(index, test) = true) {
+         double index = std::stod(index);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    if (String2Double(x, test) = true) {
+         double x = std::stod(x);
+         string test("");
+    }
+    else {
+         calculate
+    }
+    double product = 1;
+    for(size_t = index;i <= limit; i++){
+        sum *= x;
     }
 }
 
 // These are just trig functions wrapped around David's code.
-float cos(float f){
+float cos(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return cosFunction(f)
 }
 
-float sin(float f){
+float sin(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return sinFunction(f)
 }
 
-float tan(float f){
+float tan(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return tanFunction(f)
 }
 
-float cot(float f){
+float cot(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return cotFunction(f)
 }
 
-float csc(float f){
+float csc(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return cscFunction(f)
 }
 
-float sec(float f){
+float sec(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return secFunction(f)
 }
 
-float asin(float f){
+float asin(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return asinFunction(f)
 }
 
-float acos(float f){
+float acos(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return acosFunction(f)
 }
 
-float atan(float f){
+float atan(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return atanFunction(f)
 }
 
-float acsc(float f){
+float acsc(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return acscFunction(f)
 }
 
-float asec(float f){
+float asec(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return asecFunction(f)
 }
 
-float acot(float f){
+float acot(string f){
+    if (String2Double(f, test) = true) {
+         float f = std::stof(f);
+         string test("");
+    }
+    else {
+         calculate
+    }
     return acotFunction(f)
 }
 
