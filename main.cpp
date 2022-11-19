@@ -27,8 +27,7 @@ log2 (float x)
              - 1.72587999f / (0.3520887068f + mx.f);
 }
 
-static inline float
-ln (string x)
+string ln (string x)
 {
     if (String2Double(x, test) = true) {
          double x = std::stod(x);
@@ -47,7 +46,7 @@ double multdec(double x, int i) {
 }
 
 // log_b(x) = log_e(x) / log_e(b)
-double log(string b, string n) {
+string log(string b, string n) {
     if (String2Double(b, test) = true) {
          double b = std::stod(b);
          string test("");
@@ -73,7 +72,7 @@ double log(string b, string n) {
     return (double)val / multdec(10, r);
 }
 
-double exponent(string a, string b){
+string exponent(string a, string b){
     if (String2Double(a, test) = true) {
          double a = std::stod(a);
          string test("");
@@ -95,7 +94,7 @@ double exponent(string a, string b){
 }
 
 // https://en.wikipedia.org/wiki/Nth_root#Computing_principal_roots
-double nthroot(string num, string np){
+string nthroot(string num, string np){
     if (String2Double(num, test) = true) {
          double num = std::stod(num);
          string test("");
@@ -124,7 +123,7 @@ double nthroot(string num, string np){
    return x;
 }
 
-double summation(string limit, string index, string x){
+string summation(string limit, string index, string x){
     if (String2Double(limit, test) = true) {
          double limit = std::stod(limit);
          string test("");
@@ -152,7 +151,7 @@ double summation(string limit, string index, string x){
     }
 }
 
-double product(string limit, string index, string x){
+string product(string limit, string index, string x){
     if (String2Double(limit, test) = true) {
          double limit = std::stod(limit);
          string test("");
@@ -181,7 +180,7 @@ double product(string limit, string index, string x){
 }
 
 // These are just trig functions wrapped around David's code.
-float cos(string f){
+string cos(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -192,7 +191,7 @@ float cos(string f){
     return cosFunction(f)
 }
 
-float sin(string f){
+string sin(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -203,7 +202,7 @@ float sin(string f){
     return sinFunction(f)
 }
 
-float tan(string f){
+string tan(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -214,7 +213,7 @@ float tan(string f){
     return tanFunction(f)
 }
 
-float cot(string f){
+string cot(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -225,7 +224,7 @@ float cot(string f){
     return cotFunction(f)
 }
 
-float csc(string f){
+string csc(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -236,7 +235,7 @@ float csc(string f){
     return cscFunction(f)
 }
 
-float sec(string f){
+string sec(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -247,7 +246,7 @@ float sec(string f){
     return secFunction(f)
 }
 
-float asin(string f){
+string asin(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -258,7 +257,7 @@ float asin(string f){
     return asinFunction(f)
 }
 
-float acos(string f){
+string acos(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -269,7 +268,7 @@ float acos(string f){
     return acosFunction(f)
 }
 
-float atan(string f){
+string atan(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -280,7 +279,7 @@ float atan(string f){
     return atanFunction(f)
 }
 
-float acsc(string f){
+string acsc(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -291,7 +290,7 @@ float acsc(string f){
     return acscFunction(f)
 }
 
-float asec(string f){
+string asec(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
@@ -302,7 +301,7 @@ float asec(string f){
     return asecFunction(f)
 }
 
-float acot(string f){
+string acot(string f){
     if (String2Double(f, test) = true) {
          float f = std::stof(f);
          string test("");
