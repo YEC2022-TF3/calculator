@@ -13,7 +13,7 @@ Currently we have natural logarithm, logarithm, nth root, exponent, trig functio
 
 The reason we used C++ instead of as an example python is because it's so much faster and can be optimized at compile time.
 
-Trig functions are done in inline assembly (MSVC) so they are also very fast.
+Trig functions are done in inline x86 assembly (MSVC) so they are also very fast.
 
 Natural logarithm uses an algorithm which is so fast and advanced that we were shocked by how it was implemented (available in fastapprox repo in github).
 
