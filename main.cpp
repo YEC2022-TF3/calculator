@@ -1,6 +1,8 @@
 #include <iostream>
 #include <trigfunc.h>
 using namespace std;
+double exponent(double, double);
+double nthroot(double, double);
 
 // credits to fastapprox for this implementation its extremely fast.
 static inline float
@@ -40,6 +42,30 @@ double log(int b, double n) {
     return (double)val / multdec(10, r);
 }
 
+double exponent(double a, double b){
+    double t(1);
+    for(int i = 0; i < b; ++i)
+        t *= a;
+    return t;
+}
+
+// https://en.wikipedia.org/wiki/Nth_root#Computing_principal_roots
+double nthroot(double num, double np){
+    double x;
+    double A(num);
+    double dx;
+    double eps(10e-6);
+    double n(np);
+    x = A * 0.5;
+    dx = (A/exponent(x, n-1)-x)/n;
+    while(dx >= eps || dx <= -eps){
+        x = x + dx;
+        dx = (A/exponent(x, n - 1)-x)/n;
+    }
+   return x;
+}
+
+// These are just trig functions wrapped around David's code.
 float cos(float f){
     return cosFunction(f)
 }
@@ -103,7 +129,7 @@ bool isNumber(string s) // if number or variable
 long long factorial(long long x)
 {
     long long sum = 1;
-    for(long long i = 2;i<=x;i++){
+    for(long long i = 2; i <= x; i++){
         sum *= i;
     }
     return sum;
@@ -112,7 +138,7 @@ long long factorial(long long x)
 // removes spaces
 string removeSpaces(string str){
     string newString="";
-    for(size_t i =0; i<str.length() ;i++){
+    for(size_t i = 0; i < str.length() ; i++){
         if(str.at(i) != ' '){
             newString +=str.at(i);
         }
