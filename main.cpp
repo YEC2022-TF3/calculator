@@ -65,6 +65,20 @@ double nthroot(double num, double np){
    return x;
 }
 
+long double summation(long double limit,long double index,long double x){
+    long double sum = 0;
+    for(size_t = index;i<=limit;i++){
+        sum+=x;
+    }
+}
+
+long double product(long double limit,long double index,long double x){
+    long double sum = 0;
+    for(size_t = index;i<=limit;i++){
+        sum*=x;
+    }
+}
+
 // These are just trig functions wrapped around David's code.
 float cos(float f){
     return cosFunction(f)
