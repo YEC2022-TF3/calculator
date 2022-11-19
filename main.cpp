@@ -73,7 +73,7 @@ long double summation(long double limit,long double index,long double x){
 }
 
 long double product(long double limit,long double index,long double x){
-    long double sum = 0;
+    long double product = 1;
     for(size_t = index;i<=limit;i++){
         sum*=x;
     }
